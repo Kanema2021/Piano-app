@@ -1,12 +1,10 @@
-import './App.css';
-import { Piano } from './components/Piano.js';
-
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Piano from "./Piano";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Piano />
-      </header>
+    <div className="app-container">
+      <Piano />
     </div>
   );
 }
