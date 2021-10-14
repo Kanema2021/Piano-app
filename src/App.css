@@ -8,12 +8,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #444;
+  background: #ECE2D0;
 }
 
 .piano-container {
   display: inline-flex;
-  border-top: 10px solid blue;
+  border-top: 10px solid #444444;
 }
 
 .piano-natural-key {
@@ -36,7 +36,7 @@
 }
 
 .piano-natural-key-playing {
-  border-bottom: 10px solid blue;
+  border-bottom: 10px solid #ED5855;
   color: blue;
 }
 
