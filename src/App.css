@@ -8,25 +8,25 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #222222;
+  background: #e5d9cc;
 }
 
 .piano-container {
   display: inline-flex;
-  border-top: 5px solid #be0aff;
-  border-radius: 5px 5px 0 0;
+  border-top: 2px solid #3e3830;
 }
 
 .piano-natural-key {
   width: 60px;
   height: 175px;
-  background: #222222;
+  background: #fbfaf5;
   margin: 0 .5px;
-  color: #f5f5f5;
+  color: #3F3931;
   padding: 12px;
   border-radius: 0 0 15px 15px; 
-  border : 2px solid #f72585;
+  border : 2px solid #3e3830;
   border-top: none;
+  transition: all .25s ease-out;
 }
 
 .piano-text {
@@ -36,11 +36,8 @@
   justify-content: center;
   font-size: 1rem;
 }
-
-.piano-natural-key-playing {
-  border-bottom: 5px solid #ED5855;
-  color: blue;
-}
+/* 
+HERE */
 
 .piano-accidental-key-wrapper {
   position: relative;
@@ -50,19 +47,31 @@
 .piano-accidental-key {
   position: absolute;
   cursor: pointer;
-  background: #222222;
+  background: #3F3931;
   transform: translateX(-50%);
   width: 36px;
   height: 120px;
   border-radius: 0 0 15px 15px;
-  border : 2px solid #a1ff0a;
+  border : 2px solid #6d6964;
   border-top: none;
   padding: 5px;
   outline: none;
   color: #dbdbdd;
+  transition: all .20s ease-out;
 }
 
 .piano-accidental-key-playing {
-  border-bottom: 12px solid #ED5855;
-  color: blue;
+  border-bottom: 2px solid #3F3931;
+  background-color: #6d6964;
+  color: #fbfaf5;
+  border-color: #3F3931;
+}
+
+
+.piano-natural-key-playing {
+  border-bottom: 5px solid #3F3931;
+  color: #3F3931;
+  background-color: #b0b1a1;
+  border-color: #3F3931;
+
 }
