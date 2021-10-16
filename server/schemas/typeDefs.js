@@ -5,6 +5,9 @@ const typeDefs = gql   `
         id: ID!
         name: String!
     }
+    type Query {
+        user(id: ID!): User
+    }
 `;
 
-module.exports = typeDefs;
+module.exports = typeDefs; 

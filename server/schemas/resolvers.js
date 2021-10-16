@@ -2,8 +2,10 @@ const { User } = require('../models/Piano');
 
 const resolvers = db => ({
     Query: {
-        username: async () => {
-            return User.find();
+        user: async (parent, {id}, context) => {
+                // return User.find();
+            if (!context.user) return null;
+            return User.find(user => user.id === id)
         }
     },
     Mutation: {
