@@ -24,9 +24,9 @@ const server = new ApolloServer({
   resolvers,
   context: ({ req }) => {
     const token = req.headers.authorization || ' ';
-    const user = getUser(token);
+    // const user = getUser(token);
     // get user not defined yet...trying to figure out where to do so.
-    return { user };
+    // return { user };
   }
 });
 
