@@ -42,8 +42,10 @@
 .piano-natural-key-playing {
   border-bottom: 5px solid #3F3931;
   color: #3F3931;
-  background-color: #b0b1a1;
+  background-image: url(./rainbow.jpg);
   border-color: #3F3931;
+  background-size: cover;
+  transition: all .1s ease-out;
 }
 
 .piano-accidental-key-wrapper {
