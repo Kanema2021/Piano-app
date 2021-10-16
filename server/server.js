@@ -5,6 +5,7 @@ const routes = require('./routes');
 const { ApolloServer } = require('apollo-server-express');
 const expressJwt = require('express-jwt');
 
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -20,7 +21,13 @@ app.use(
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  context: ({ req }) => {
+    const token = req.headers.authorization || ' ';
+    // const user = getUser(token);
+    // get user not defined yet...trying to figure out where to do so.
+    // return { user };
+  }
 });
 
 app.use(express.urlencoded({ extended: true }));
