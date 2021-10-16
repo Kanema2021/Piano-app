@@ -3,12 +3,21 @@ const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
 const { ApolloServer } = require('apollo-server-express');
+const expressJwt = require('express-jwt');
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 const { typeDefs, resolvers } = require('./schemas');
+
+app.use(
+  expressJwt ({
+    secret: "SUPER_SECRET",
+    algorithms: [""],
+    credentialsRequired: false,
+  })
+);
 
 const server = new ApolloServer({
   typeDefs,
