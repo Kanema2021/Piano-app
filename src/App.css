@@ -26,7 +26,7 @@
   border-radius: 0 0 15px 15px; 
   border : 2px solid #3e3830;
   border-top: none;
-  transition: all .25s ease-out;
+  transition: all .1s ease-out;
 }
 
 .piano-text {
@@ -36,8 +36,13 @@
   justify-content: center;
   font-size: 1rem;
 }
-/* 
-HERE */
+
+.piano-natural-key-playing {
+  border-bottom: 5px solid #3F3931;
+  color: #3F3931;
+  background-color: #b0b1a1;
+  border-color: #3F3931;
+}
 
 .piano-accidental-key-wrapper {
   position: relative;
@@ -57,7 +62,7 @@ HERE */
   padding: 5px;
   outline: none;
   color: #dbdbdd;
-  transition: all .20s ease-out;
+  transition: all .1s ease-out;
 }
 
 .piano-accidental-key-playing {
@@ -65,13 +70,4 @@ HERE */
   background-color: #6d6964;
   color: #fbfaf5;
   border-color: #3F3931;
-}
-
-
-.piano-natural-key-playing {
-  border-bottom: 5px solid #3F3931;
-  color: #3F3931;
-  background-color: #b0b1a1;
-  border-color: #3F3931;
-
 }
