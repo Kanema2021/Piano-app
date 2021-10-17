@@ -26,8 +26,9 @@ Homepage
 
 ## Creators
 * Eva Popp - 
-* Karen Marting - 
-* Eva Popp - 
+* Mariam Ngoye - 
+* Danielle Tran - 
+* Rachael Wintersteen -
 * Karen Marting - 
 * Ashley Jones - thebleufox8@gmail.com
 
