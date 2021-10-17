@@ -1,3 +1,36 @@
+# Final Project: Pocket Piano
+
+## Description
+An on-the-go piano you can play from your phone or on a browser.
+
+## MVPs
+```md
+* Create piano with simple keyboard UI 
+
+* Import SoundFontPlayer and connect to keys on click
+
+* Implement user account creation and login using GraphQL
+
+* Record audio from user and save to Firebase (Bonus if all other MVPs are accomplished)
+```
+
+## Technologies Used
+* Javascript, HTML, CSS
+
+## Screenshots
+Homepage 
+![Homepage](/src/images/homepage.png)
+
+## Repository
+* GitHub Repo: https://github.com/Kanema2021/Piano-app
+
+## Creators
+* Eva Popp - 
+* Karen Marting - 
+* Eva Popp - 
+* Karen Marting - 
+* Ashley Jones - thebleufox8@gmail.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
