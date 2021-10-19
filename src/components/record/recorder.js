@@ -8,6 +8,7 @@ const recorder = new MicRecorder({
 
 const TestRecording = () => {
   const [isRecording, setIsRecording] = useState(false);
+  
   recorder.start().then(() => {
 
   }).catch((e) => {
