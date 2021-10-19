@@ -8,7 +8,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* background: url(./background.jpg); */
+  background: url(./images/wood-background.jpg);
   background-size: cover;
 }
 
@@ -38,13 +38,6 @@
   font-size: 1rem;
 }
 
-.piano-natural-key-playing {
-  border-bottom: 5px solid #3F3931;
-  color: #3F3931;
-  background-color: #b0b1a1;
-  border-color: #3F3931;
-}
-
 .piano-accidental-key-wrapper {
   position: relative;
   width: 0;
@@ -71,4 +64,12 @@
   background-color: #6d6964;
   color: #fbfaf5;
   border-color: #3F3931;
+}
+
+.piano-natural-key-playing {
+  border-bottom: 5px solid #3F3931;
+  color: #3F3931;
+  background-image: url(./images/rainbow.jpg);
+  border-color: #3F3931;
+  background-size: cover;
 }
