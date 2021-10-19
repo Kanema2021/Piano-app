@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const User = require('../../models/User');
-
-
+// const User = require('/server/models/User.js');
 
 module.exports = router;
