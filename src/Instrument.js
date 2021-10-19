@@ -7,13 +7,9 @@ import getNotesBetween from "./utils/getNotesBetween";
 const isRegularKey = event => {
   return !event.ctrlKey && !event.metaKey && !event.shiftKey;
 };
-const Instrument = ({
-  instrumentName,
-  startNote,
-  endNote,
-  renderPianoKey,
-  keyboardMap
-}) => {
+const Instrument = function ({
+  instrumentName, startNote, endNote, renderPianoKey, keyboardMap
+}) {
   const notes = getNotesBetween(startNote, endNote);
 
   const [state, setState] = useState({
@@ -85,8 +81,7 @@ const Instrument = ({
 
       <InstrumentAudio
         instrumentName={instrumentName}
-        notes={state.notesPlaying}
-      />
+        notes={state.notesPlaying} />
     </Fragment>
   );
 };
