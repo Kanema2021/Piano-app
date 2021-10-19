@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import "./App.css";
 import Piano from "./Piano";
 import { BrowserRouter } from 'react-router-dom';
+import PlayBackFunction from "./components/record/PlayBack";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -27,6 +28,7 @@ function App() {
         <Navbar />
         <div className="app-container">
           <Piano />
+          <PlayBackFunction />
         </div>
       </BrowserRouter>
       

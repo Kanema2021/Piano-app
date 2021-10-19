@@ -4,11 +4,8 @@ const Schema = mongoose.Schema;
 
 const PianoSchema = new Schema({
   id: {
-    type: Number,
+    type: Object,
   },
-
-
-
 });
 
 const User = mongoose.model("Piano", PianoSchema);
