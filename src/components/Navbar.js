@@ -1,10 +1,12 @@
+
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
-import { Navbar, Nav, Button, Container, Modal, Tab } from 'react-bootstrap';
+import { Navbar, Nav, Button, Container, Modal, } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
-
 import Auth from '../utils/auth';
+import "../App.css"
+
 
 const AppNavbar = () => {
   // set modal display state
@@ -50,7 +52,7 @@ const AppNavbar = () => {
           <LoginForm handleModalClose={() => setShowLoginModal(false)} />
         </Modal.Body>
       </Modal>
-      
+
       <Modal
         size='lg'
         style={{ zIndex: 3 }}
@@ -72,3 +74,52 @@ const AppNavbar = () => {
 };
 
 export default AppNavbar;
+
+
+
+
+
+
+// import React from 'react';  
+// import './App.css';  
+// import { Button,Modal} from 'react-bootstrap';  
+// class App extends React.Component {  
+//   constructor(){  
+//     super();  
+//     this.state={  
+//       show:false  
+//     }  
+//   }  
+//   handleModal(){  
+//     this.setState({show:!this.state.show})  
+//   }  
+//   render(){  
+//     return (  
+//       <div>  
+//         <h2 align='center'>Example of Modal in Reactjs</h2>  
+//         <div className="modalClass">  
+//           <Button onClick={()=>this.handleModal()}>Click To Open Modal</Button>  
+//         </div>  
+          
+//         <Modal show={this.state.show} onHide={()=>this.handleModal()}>  
+//           <Modal.Header closeButton>This is a Modal Heading</Modal.Header>  
+//           <Modal.Body>This is a Modal Body</Modal.Body>  
+//           <Modal.Footer>  
+//             <Button onClick={()=>this.handleModal()}>Close</Button>  
+//             <Button onClick={()=>this.handleModal()}>Save</Button>  
+//           </Modal.Footer>  
+//         </Modal>  
+//       </div>  
+//     )  
+//   }  
+// }  
+// export default App;  
+
+
+
+
+
+
+
+
+
