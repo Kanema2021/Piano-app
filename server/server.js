@@ -27,6 +27,7 @@ const server = new ApolloServer({
     // const user = getUser(token);
     // get user not defined yet...trying to figure out where to do so.
     // return { user };
+    // add endpoints
   }
 });
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Modal } from 'react-bootstrap';
 
 
 import { LOGIN_USER } from '../utils/mutations';
@@ -49,6 +49,8 @@ const LoginForm = () => {
 
   return (
     <>
+    {/* <Modal
+    show= {true}> */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
@@ -85,6 +87,7 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
+      {/* </Modal> */}
     </>
   );
 };
