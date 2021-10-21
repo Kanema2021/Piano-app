@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Navbar, Nav, Button, Container, Modal, } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
@@ -14,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar bg='light' variant='light' expand='lg'>
         <Container fluid>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar'>
@@ -25,8 +24,9 @@ const AppNavbar = () => {
                 </>
               ) : (
                 <>
-                  <Button onClick={() => setShowLoginModal(true)}>Login</Button>
-                  <Button onClick={() => setShowSignupModal(true)}>Signup</Button>
+                <br />
+                  <Button onClick={() => setShowLoginModal(true)}>Login</Button><br />
+                  <Button onClick={() => setShowSignupModal(true)}>Sign Up</Button>
                 </>
               )}
             </Nav>
