@@ -1,3 +1,55 @@
+nav {
+  width: 50%;
+  float: right;
+  padding-bottom: 15px;
+  margin-top: none;
+  padding-top: none;
+}
+
+.button_slide {
+  border: 2px solid #fbfaf5;
+  border-radius: 35px;
+  padding: 16px 36px;
+  display: inline-block;
+  font-family: Georgia;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_left_record {
+  color: #fbfaf5;
+  background-color: #3F3931;
+  width: 35%;
+  margin-right: 35px;
+}
+
+.slide_left_record:hover {
+  box-shadow: inset 400px 50px 0 0 #4FBF26;
+  color: #fbfaf5;
+}
+
+.slide_left_stop {
+  color: #fbfaf5;
+  background-color: #3F3931;
+  width: 35%;
+  margin-left: 35px;
+}
+
+.slide_left_stop:hover {
+  box-shadow: inset 400px 50px 0 0 red;
+  color: #fbfaf5;
+}
+
+#outer {
+  width: 364px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
 .app-container {
   position: absolute;
   left: 0;
@@ -72,4 +124,8 @@
   background-image: url(./images/rainbow.jpg);
   border-color: #3F3931;
   background-size: cover;
+}
+
+.controls {
+
 }

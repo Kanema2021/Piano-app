@@ -9,14 +9,17 @@ import Piano from "./Piano";
 import Recording from "./components/record/Recording";
 
 function App() {
-  return (      
-        
-        <div className="app-container">
-          <Navbar />
-          <Piano />
-          <Recording />
-        </div>  
-  
+  return (
+    <div className="app-container">
+      <nav><Navbar />
+      </nav>
+      <br />
+      <div>
+        <Piano />
+        <Recording />
+      </div>
+    </div>
+
   );
 }
 export default App

@@ -5,7 +5,7 @@ import MicRecorder from 'mic-recorder-to-mp3';
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
 class Recording extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       isRecording: false,
@@ -47,15 +47,20 @@ class Recording extends React.Component {
         this.setState({ isBlocked: true })
       },
     );
-  } 
-  render(){
+  }
+  render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <button onClick={this.start} disabled={this.state.isRecording}>Record</button>
-          <button onClick={this.stop} disabled={!this.state.isRecording}>Stop</button>
+        <container className="App-header">
+
+          <div id="outer">
+            <div class="button_slide slide_left_record" onClick={this.start} disabled={this.state.isRecording}>Record</div>
+            <div class="button_slide slide_left_stop" onClick={this.stop} disabled={!this.state.isRecording}>Stop</div>
+          </div>
+        <div className="controls">
           <audio src={this.state.blobURL} controls="controls" />
-        </header>
+        </div>
+        </container>
       </div>
     );
   }
