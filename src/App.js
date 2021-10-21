@@ -1,39 +1,22 @@
 import React from "react";
-import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { ApolloProvider } from '@apollo/client'
+
+// import { ApolloClient, InMemoryCache } from '@apollo/client'
+// import { ApolloProvider } from '@apollo/client'
 import Navbar from './components/Navbar';
 import "./App.css";
 import Piano from "./Piano";
-import { BrowserRouter } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 import Recording from "./components/record/Recording";
 
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  request: operation => {
-    const token = localStorage.getItem("id-token")
-    operation.setContext(({ headers = {} }) => ({
-      headers: {
-        ...headers,
-        authorization: localStorage.getItem(token) || "",
-      }
-    }))
-  }
-})
-
 function App() {
-  return (
-
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Navbar />
+  return (      
+        
         <div className="app-container">
+          <Navbar />
           <Piano />
           <Recording />
-        </div>
-      </BrowserRouter>
-      
-    </ApolloProvider>
-
+        </div>  
+  
   );
 }
 export default App

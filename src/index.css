@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,9 +21,9 @@ body {
   display: flex;
   font-weight: 400;
   font-family: sans-serif;
-  background: #cbd6d8;  /* fallback for old browsers */
-  background: transparent; /* Chrome 10-25, Safari 5.1-6 */
-  background: transparent; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #cbd6d8;  
+  background: transparent;
+  background: transparent; 
   
 }
 
@@ -81,4 +81,4 @@ body, html, .App, #root, .outer {
 
 .forgot-password a {
   color: #167bff;
-}
+} */

@@ -5,7 +5,7 @@ import InstrumentAudio from "./Keyboard/InstrumentAudio";
 import getNotesBetween from "./utils/getNotesBetween";
 
 const isRegularKey = event => {
-  return !event.ctrlKey && !event.metaKey && !event.shiftKey;
+  return !event.ctrlKey && !event.metaKey && !event.shiftKey && event.srcElement.className !== "form-control";
 };
 const Instrument = function ({
   instrumentName, startNote, endNote, renderPianoKey, keyboardMap
@@ -36,6 +36,7 @@ const Instrument = function ({
 
   const handleKeyUp = e => {
     if (isRegularKey(e) && !e.repeat) {
+      console.log (e)
       const note = getNoteFromKeyboardKey(e.key);
       if (note) {
         setState({
