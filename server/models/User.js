@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-
+const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-  name: {
+const userSchema = new Schema({
+  username: {
     type: String,
     trim: true,
     required: "Name is Required"
@@ -22,6 +22,24 @@ const UserSchema = new Schema({
 
 });
 
-const User = mongoose.model("User", UserSchema);
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
+
+userSchema.virtual('tuneCount').get(function () {
+  return this.savedTunes.length;
+});
+
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
