@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { Navbar, Nav, Button, Container, Modal, } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
@@ -17,8 +16,6 @@ const AppNavbar = () => {
     <>
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
-          {/* <Navbar.Brand as={Link} to='/'>Login/Signup
-        </Navbar.Brand> */}
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
@@ -43,7 +40,7 @@ const AppNavbar = () => {
         show={showLoginModal}
         onHide={() => setShowLoginModal(false)}
         aria-labelledby='signup-modal'>
-        
+
         <Modal.Header closeButton>
           <Modal.Title id='signup-modal'>
           </Modal.Title>
@@ -79,41 +76,6 @@ export default AppNavbar;
 
 
 
-
-// import React from 'react';  
-// import './App.css';  
-// import { Button,Modal} from 'react-bootstrap';  
-// class App extends React.Component {  
-//   constructor(){  
-//     super();  
-//     this.state={  
-//       show:false  
-//     }  
-//   }  
-//   handleModal(){  
-//     this.setState({show:!this.state.show})  
-//   }  
-//   render(){  
-//     return (  
-//       <div>  
-//         <h2 align='center'>Example of Modal in Reactjs</h2>  
-//         <div className="modalClass">  
-//           <Button onClick={()=>this.handleModal()}>Click To Open Modal</Button>  
-//         </div>  
-          
-//         <Modal show={this.state.show} onHide={()=>this.handleModal()}>  
-//           <Modal.Header closeButton>This is a Modal Heading</Modal.Header>  
-//           <Modal.Body>This is a Modal Body</Modal.Body>  
-//           <Modal.Footer>  
-//             <Button onClick={()=>this.handleModal()}>Close</Button>  
-//             <Button onClick={()=>this.handleModal()}>Save</Button>  
-//           </Modal.Footer>  
-//         </Modal>  
-//       </div>  
-//     )  
-//   }  
-// }  
-// export default App;  
 
 
 
