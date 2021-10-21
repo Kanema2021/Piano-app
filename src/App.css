@@ -1,9 +1,10 @@
 nav {
-  width: 50%;
+  width: 55%;
   float: right;
   padding-bottom: 15px;
-  margin-top: none;
-  padding-top: none;
+  position:absolute;
+  top:0;
+  right:0;
 }
 
 .button_slide {
@@ -69,6 +70,18 @@ nav {
   border-top: 2px solid #3e3830;
 }
 
+.controls {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .piano-natural-key {
   width: 60px;
   height: 175px;
@@ -124,8 +137,4 @@ nav {
   background-image: url(./images/rainbow.jpg);
   border-color: #3F3931;
   background-size: cover;
-}
-
-.controls {
-
 }
