@@ -36,7 +36,7 @@ const AppNavbar = () => {
       {/* set modal data up */}
       <Modal
         size='lg'
-        style={{ zIndex: 4 }}
+        // style={{ zIndex: 6 }}
         show={showLoginModal}
         onHide={() => setShowLoginModal(false)}
         aria-labelledby='signup-modal'>
@@ -52,7 +52,7 @@ const AppNavbar = () => {
 
       <Modal
         size='lg'
-        style={{ zIndex: 4 }}
+        // style={{ zIndex: 6 }}
         show={showSignupModal}
         onHide={() => setShowSignupModal(false)}
         aria-labelledby='signup-modal'>
