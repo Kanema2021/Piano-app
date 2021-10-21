@@ -1,4 +1,4 @@
-# Final Project: Pocket Piano
+# Final Project: Piano on the Go
 
 ## Description
 An on-the-go piano you can play from your phone or on a browser.
