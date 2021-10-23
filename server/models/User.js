@@ -36,9 +36,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-userSchema.virtual('tuneCount').get(function () {
-  return this.savedTunes.length;
-});
+// userSchema.virtual('tuneCount').get(function () {
+//   return this.savedTunes.length;
+// });
 
 const User = mongoose.model("User", userSchema);
 

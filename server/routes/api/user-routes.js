@@ -4,7 +4,7 @@ const router = require('express').Router();
 const {
     createUser,
     getSingleUser,
-    saveTune,
+    // saveTune,
     // deleteTune,
     login,
 } = require('../../controllers/user-controller')
@@ -12,7 +12,9 @@ const {
 const { authMiddleware } = require('../../utils/auth');
 
 
-router.route('/').post(createUser).put(authMiddleware, saveTune);
+
+router.route('/').post(createUser)
+// .put(authMiddleware, saveTune);
 
 router.route('/login').post(login);
 

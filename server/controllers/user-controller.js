@@ -1,5 +1,4 @@
 const { User } = require('../models');
-// import sign token function from auth
 const { signToken } = require('../utils/auth');
 
 module.exports = {
@@ -15,7 +14,7 @@ module.exports = {
 
     res.json(foundUser);
   },
-  // create a user, sign a token, and send it back (to client/src/components/SignUpForm.js)
+  // create a user, sign a token, and send it back (to src/components/SignUpForm.js)
   async createUser({ body }, res) {
     const user = await User.create(body);
 
@@ -23,10 +22,10 @@ module.exports = {
       return res.status(400).json({ message: 'Something is wrong!' });
     }
     const token = signToken(user);
+    console.log()
     res.json({ token, user });
   },
-  // login a user, sign a token, and send it back (to client/src/components/LoginForm.js)
-  // {body} is destructured req.body
+
   async login({ body }, res) {
     const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] });
     if (!user) {
@@ -40,32 +39,5 @@ module.exports = {
     }
     const token = signToken(user);
     res.json({ token, user });
-  },
-  
-  async saveTune({ user, body }, res) {
-    console.log(user);
-    try {
-      const updatedUser = await User.findOneAndUpdate(
-        { _id: user._id },
-        { $addToSet: { savedTunes: body } },
-        { new: true, runValidators: true }
-      );
-      return res.json(updatedUser);
-    } catch (err) {
-      console.log(err);
-      return res.status(400).json(err);
-    }
-  },
-  // remove a book from `savedBooks`
-  async deleteTune({ user, params }, res) {
-    const updatedUser = await User.findOneAndUpdate(
-      { _id: user._id },
-      { $pull: { savedTunes: { tuneId: params.tuneId } } },
-      { new: true }
-    );
-    if (!updatedUser) {
-      return res.status(404).json({ message: "Couldn't find user with this id!" });
-    }
-    return res.json(updatedUser);
   },
 };

@@ -6,10 +6,9 @@ export const GET_ME = gql`
         _id
         username
         email
-        savedTunes {
-            tuneId   
-        }
-
+        # savedTunes {
+        #     tuneId   
+       # }
     }
 }
 `;

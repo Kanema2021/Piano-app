@@ -14,13 +14,13 @@ function App() {
       <nav><Navbar />
       </nav>
       <br />
-      <div classNmae="piano-keyboard">
+      <div className="piano-keyboard">
         <Piano />
-        </div>
-        <div classNmae="recording-controls">
-        <Recording />
-        </div>
       </div>
+      <div className="recording-controls">
+        <Recording />
+      </div>
+    </div>
   );
 }
 export default App
