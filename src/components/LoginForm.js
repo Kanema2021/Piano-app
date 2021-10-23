@@ -80,7 +80,7 @@ const LoginForm = () => {
           variant='success'>
           Submit
         </Button>
-      </Form> 
+      </Form>
     </>
   );
 };
