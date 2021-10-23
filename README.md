@@ -8,7 +8,6 @@ A simple, on-the-go piano you can play from your phone or on a browser. Piano on
 * [Installation](#Installation)
 * [Technologies Used](#Technologies-Used)
 * [Screenshots](#Screenshots)
-* [Live Demo](#Live-Demo)
 * [Repository](#Repository)
 * [Creators](#Creators)
 * [Possible Add-ons](#Possible-Add-ons)
@@ -36,16 +35,14 @@ Notable npm packages used
 
 ## Screenshots
 ![Homepage](/src/images/homepage.png)
-
-## Live demo
-Check out the piano in action here: [Link](link to live demo)
+![Demo](/src/images/Piano on the Go.gif)
 
 ## Repository
 * GitHub Repo: https://github.com/Kanema2021/Piano-app
-* Heroku Deployment: 
+* Heroku Deployment: https://piano-on-the-go.herokuapp.com/
 
 ## Creators
-* Eva Popp - Github: @evapopp
+* Eva Popp - evapopp8@gmail.com, Github: @evapopp
 * Mariam Ngoye - Github: @mariamngoye
 * Danielle Tran - danielletran89@gmail.com, Github: @danielletran89
 * Rachael Wintersteen - rachaelwintersteen@gmail.com, Github: @rwintersteen
@@ -53,5 +50,5 @@ Check out the piano in action here: [Link](link to live demo)
 * Ashley Jones - thebleufox8@gmail.com, GitHub: @bleufox
 
 ## Possible Add-ons
-* Ability to keep recordings stored on a database that connects the mp3 files to a specific user
+* Ability to keep recordings stored on a database that associates the saved mp3 files to a specific user
 * Changing the sound effects of the piano that a user can manually choose from
