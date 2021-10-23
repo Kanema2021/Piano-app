@@ -35,7 +35,7 @@ Notable npm packages used
 
 ## Screenshots
 ![Homepage](/src/images/piano-screenshot.png)
-![Demo](/src/images/Piano on the Go.gif)
+![Demo](/src/images/Piano-on-the-go.gif)
 
 ## Repository
 * GitHub Repo: https://github.com/Kanema2021/Piano-app
