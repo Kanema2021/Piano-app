@@ -61,45 +61,21 @@ const Piano = () => {
       <Instrument
         instrumentName={"acoustic_grand_piano"}
         startNote={"C3"}
-        endNote={"B5"}
+        endNote={"B3"}
         renderPianoKey={renderPianoKey}
         keyboardMap={{
-          c: "C3",
-          C3: "C#3",
-          d: "D3",
-          D3: "D#3",
-          e: "E3",
-          f: "F3",
-          F3: "F#3",
-          g: "G3",
-          G3: "G#3",
-          a: "A3",
-          A3: "A#3",
-          b: "B3",
-          C: "C4",
-          C4: "C#4",
-          D: "D4",
-          D4: "D#4",
-          E: "E4",
-          F: "F4",
-          F4: "F#4",
-          G: "G4",
-          G4: "G#4",
-          A: "A4",
-          A4: "A#4",
-          B: "B4",
-          Cc: "C5",
-          C5: "C#5",
-          Dd: "D5",
-          D5: "D#5",
-          Ee: "E5",
-          Ff: "F5",
-          F5: "F#5",
-          Gg: "G5",
-          G5: "G#5",
-          Aa: "A5",
-          A5: "A#5",
-          Bb: "B5"
+          Q: "C3",
+          2: "C#3",
+          W: "D3",
+          3: "D#3",
+          E: "E3",
+          R: "F3",
+          4: "F#3",
+          T: "G3",
+          5: "G#3",
+          Y: "A3",
+          6: "A#3",
+          U: "B3",
         }}
       />
     </div>
