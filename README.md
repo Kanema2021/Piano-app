@@ -34,7 +34,7 @@ Notable npm packages used
 * soundfont-player
 
 ## Screenshots
-![Homepage](/src/images/homepage.png)
+![Homepage](/src/images/piano-screenshot.png)
 ![Demo](/src/images/Piano on the Go.gif)
 
 ## Repository
