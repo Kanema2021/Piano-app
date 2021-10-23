@@ -49,7 +49,7 @@ Check out the piano in action here: [Link](link to live demo)
 * Mariam Ngoye - Github: @mariamngoye
 * Danielle Tran - danielletran89@gmail.com, Github: @danielletran89
 * Rachael Wintersteen - rachaelwintersteen@gmail.com, Github: @rwintersteen
-* Karen Marting - Github: @Kanema2021
+* Karen Marting - kamarting11@gmail.com, Github: @Kanema2021
 * Ashley Jones - thebleufox8@gmail.com, GitHub: @bleufox
 
 ## Possible Add-ons
