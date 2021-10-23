@@ -20,7 +20,7 @@ const userSchema = new Schema({
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
 
-});
+})
 
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
