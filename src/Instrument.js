@@ -5,15 +5,11 @@ import InstrumentAudio from "./Keyboard/InstrumentAudio";
 import getNotesBetween from "./utils/getNotesBetween";
 
 const isRegularKey = event => {
-  return !event.ctrlKey && !event.metaKey && !event.shiftKey;
+  return !event.ctrlKey && !event.metaKey && !event.shiftKey && event.srcElement.className !== "form-control";
 };
-const Instrument = ({
-  instrumentName,
-  startNote,
-  endNote,
-  renderPianoKey,
-  keyboardMap
-}) => {
+const Instrument = function ({
+  instrumentName, startNote, endNote, renderPianoKey, keyboardMap
+}) {
   const notes = getNotesBetween(startNote, endNote);
 
   const [state, setState] = useState({
@@ -40,6 +36,7 @@ const Instrument = ({
 
   const handleKeyUp = e => {
     if (isRegularKey(e) && !e.repeat) {
+      console.log (e)
       const note = getNoteFromKeyboardKey(e.key);
       if (note) {
         setState({
@@ -85,8 +82,7 @@ const Instrument = ({
 
       <InstrumentAudio
         instrumentName={instrumentName}
-        notes={state.notesPlaying}
-      />
+        notes={state.notesPlaying} />
     </Fragment>
   );
 };

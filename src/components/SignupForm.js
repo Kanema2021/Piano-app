@@ -8,12 +8,18 @@ import { useMutation } from '@apollo/client'
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+<<<<<<< HEAD
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
   //mutation functionality
   const [addUser]= useMutation(ADD_USER)
+=======
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [addUser] = useMutation(ADD_USER)
+>>>>>>> main
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -23,7 +29,10 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+<<<<<<< HEAD
     // check if form has everything (as per react-bootstrap docs)
+=======
+>>>>>>> main
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -32,7 +41,11 @@ const SignupForm = () => {
 
     try {
       const response = await addUser({
+<<<<<<< HEAD
         variables: { ...userFormData}
+=======
+        variables: { ...userFormData }
+>>>>>>> main
       });
 
       if (!response.ok) {
@@ -56,9 +69,13 @@ const SignupForm = () => {
 
   return (
     <>
+<<<<<<< HEAD
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
+=======
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+>>>>>>> main
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
@@ -102,7 +119,10 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
+<<<<<<< HEAD
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+=======
+>>>>>>> main
           type='submit'
           variant='success'>
           Submit

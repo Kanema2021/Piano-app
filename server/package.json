@@ -1,7 +1,9 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^3.4.0",
     "apollo-server-express": "^3.4.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-jwt": "^6.1.0",
     "graphql": "^15.6.1",
-    "mongoose": "^6.0.10"
+    "mongoose": "^5.8.5"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 // import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
@@ -17,6 +18,25 @@ const AppNavbar = () => {
         {/* <Navbar.Brand as={Link} to='/'>Login/Signup
         </Navbar.Brand> */}
         <Navbar.Toggle aria-controls='navbar' />
+=======
+import { Navbar, Nav, Button, Container, Modal, } from 'react-bootstrap';
+import SignUpForm from './SignupForm';
+import LoginForm from './LoginForm';
+import Auth from '../utils/auth';
+import "../App.css"
+
+
+const AppNavbar = () => {
+  // set modal display state
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showSignupModal, setShowSignupModal] = useState(false);
+
+  return (
+    <>
+      <Navbar bg='light' variant='light' expand='lg'>
+        <Container fluid>
+          <Navbar.Toggle aria-controls='navbar' />
+>>>>>>> main
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               {Auth.loggedIn() ? (
@@ -24,12 +44,21 @@ const AppNavbar = () => {
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
+<<<<<<< HEAD
                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+=======
+                <>
+                <br />
+                  <Button onClick={() => setShowLoginModal(true)}>Login</Button><br />
+                  <Button onClick={() => setShowSignupModal(true)}>Sign Up</Button>
+                </>
+>>>>>>> main
               )}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+<<<<<<< HEAD
       {/* set modal data up */}
       <Modal
         size='lg'
@@ -63,6 +92,40 @@ const AppNavbar = () => {
         </Tab.Container>
       </Modal>
     </>
+=======
+      
+      <Modal
+        size='lg'
+        show={showLoginModal}
+        onHide={() => setShowLoginModal(false)}
+        aria-labelledby='signup-modal'>
+
+        <Modal.Header closeButton>
+          <Modal.Title id='signup-modal'>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <LoginForm handleModalClose={() => setShowLoginModal(false)} />
+        </Modal.Body>
+      </Modal>
+
+      <Modal
+        size='lg'
+        show={showSignupModal}
+        onHide={() => setShowSignupModal(false)}
+        aria-labelledby='signup-modal'>
+
+        <Modal.Header closeButton>
+          <Modal.Title id='signup-modal'>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <SignUpForm handleModalClose={() => setShowSignupModal(false)} />
+        </Modal.Body>
+      </Modal>
+    </>
+
+>>>>>>> main
   );
 };
 
